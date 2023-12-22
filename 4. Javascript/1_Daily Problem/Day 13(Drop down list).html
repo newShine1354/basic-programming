@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop Down list</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .navbar ul{
+            list-style: none;
+        }
+
+        .navbar ul li{
+            display: inline;
+            position: relative;
+            padding: 0px 20px;
+        }
+
+        .navbar a{
+            text-decoration: none;
+            color: black;
+        }
+
+        .navbar ul ul{
+            position: absolute;
+            left: 0px;
+            width: 300px;
+            top: 100%;
+            background-color:red;
+            opacity: 0;
+            top: -20px;
+            transition: opacity 1s ease-in, top 1s ease-in;
+        }
+
+        .navbar li li{
+            display: block;
+            padding: 10px;
+            color: white;
+            border-bottom: 1px solid white;
+        }
+
+        .navbar ul ul a{
+            color: white;
+        }
+
+        .navbar li:hover ul{
+            top: 20px;
+            opacity: 1;
+        }
+
+        .navbar ul ul ul{
+            visibility: hidden;
+            left: 100%;
+            top: 0px;
+            transition: top 1s ease-in;
+        }
+
+        .navbar ul ul li:hover ul{
+            visibility: visible;
+            top: 0px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a>
+            <ul>
+                <li><a href="#">IT Services</a></li>
+                <li><a href="#">DM Services</a>
+                <ul>
+                    <li><a href="">Services one</a></li>
+                    <li><a href="">Services two</a></li>
+                    <li><a href="">Services three</a></li>
+                </ul>
+                </li>
+                <li><a href="#">Web Services</a></li>
+            </ul>
+        </li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>
+
+

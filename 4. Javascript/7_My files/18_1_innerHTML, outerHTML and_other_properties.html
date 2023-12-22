@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inner_html</title>
+</head>
+<body><!-- hello -->
+    <span id="first"><b>Hi</b> I am span.</span>
+    <ul id ="myList">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+    <script>
+        // Dir Method
+        // console.log(document.getElementsByTagName("span")[0]);
+        // console.dir(document.getElementsByTagName("span")[0]);
+
+        // Use to read tag name of an element.
+        // tagName: only exists for Element nodes.
+        // nodeName: defined for any node (text, comment etc.)
+        // console.log(document.body.firstChild.nodeName);
+        // console.log(document.body.firstElementChild.nodeName);
+        // console.log(document.body.firstChild.tagName);
+        // console.log(document.body.firstElementChild.tagName);
+
+        // InnerElement and OuterHTML
+        // console.log(myList.innerHTML);
+        // myList.innerHTML = "I am fine"
+        // console.log(myList.innerHTML);
+        // console.log(myList.outerHTML);
+        // myList.outerHTML = "<b>hilo hilo</b>"
+        // Note: innerHTML is only valid for element nodes. For other node types we can use nodeValue or data.
+        // console.log(document.body.firstChild);
+        // console.log(document.body.firstElementChild);
+        // console.log(document.body.firstChild.data);
+        // console.log(document.body.firstChild.nodeValue);
+        
+        // TextContent and innerText
+        // console.log(myList.innerText);
+        // console.log(myList.textContent);
+
+        // Hidden Property.
+        first.hidden = true;
+        // first.hidden = false; // (Default)
+        console.log(first.hidden);
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API</title>
+</head>
+
+<body>
+    <script>
+        // Uses of Fetch API
+        // To upload data on server
+        // To recieve data from server/network
+        // i.e to send network request
+        let p = fetch("https://jsonplaceholder.typicode.com/todos")
+        p.then((value1)=>{
+            return value1.json();
+        }).then((value2)=>{
+            console.log(value2);
+        })
+        // Registration and login": post request
+        // Detele
+        // Update
+        // To insert data: patch
+    </script>
+</body>
+
+</html>

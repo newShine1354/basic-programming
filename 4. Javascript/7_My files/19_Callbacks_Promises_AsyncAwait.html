@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callbacks_Promises_AsyncAwait</title>
+</head>
+
+<body>
+    <div>Sat Shri Akal G</div>
+    <script>
+        // Difference between Synchronous and Asynchronous Programming Language.
+        // Synchronous Programming Example:
+        // let a = prompt("Enter your name g");
+        // let b = prompt("What is your age");
+        // let c = prompt("What is your favorite color")
+        // console.log(a, "is", b, "years old and has", c, "favorite color.");
+
+        // Asynchronous Programming Example:
+        // console.log("Start");
+        // setTimeout(function() { // Asynchronous Code
+        //     console.log("Hey I am good.");
+        // }, 3000)
+        // console.log("End");
+
+        // Introduction to callback functions
+        function loadScript(src, callback) {
+            let script = document.createElement("script");
+            script.src = src;
+            script.onload = function () {
+                console.log("Loaded script with src: " + src);
+            callback(null, src); 
+            }
+        // Error Handling
+            script.onerror = function () {
+                console.log('Error loading with SRC: ' + src)
+                callback(new Error("src got some error"))
+            }
+            document.body.appendChild(script);
+        }
+
+        // function hello(error, src) {
+        //     if (error) {
+        //         console.log(error);
+        //         sendEmerencyMessageToCeo();
+        //     }
+        //     else {
+        //         alert('Hello World' + src)
+        //     }
+        // }
+        // function goodMorning(src) {
+        //     alert('Good Morning g' + src)
+        // }
+
+        // loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js", hello);
+        // The below line contains error 
+        // loadScript("https://cdn.jsdelir.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js", hello);
+        // This is called callback-based style of asynchronous programming.
+
+        // Callback Hell & Pyramid of Doom (Search on google(images))
+        // Reduces readiability and managebility of code.
+        // Callback functions for error handling are risky, because of which we use promises.
+
+        // Introduction to Promises
+        // let promise = new Promise(function (resolve, reject) {
+        //     alert("I am an alert in promise");
+        //     resolve(56)
+        // });
+        // console.log('Hello1');
+        // setTimeout(function () {
+        //     console.log("Hello2 in 2 Seconds");
+        // }, 2000)
+        // console.log("Hey, my name is Hello3");
+        // console.log(promise);
+        // There are 2 things in promises
+        // 1. PromiseState
+        // 2. PromiseResult
+        // Use of promises
+        // 1. Fetch google.com homepage ===> ("google.com homepage done.")
+        // 2. Fetch data from data api
+        // 3. Fetch picture from the server
+        // 4. Print downloading
+        // 5. Rest of the script
+        // Therefore, promises are used for parallelizing(to do various tasks parallely)
+
+        // Promise .then() and .catch()
+        // let p1 = new Promise((resolve, reject) => {
+        //     console.log("Promise is pending.");
+        //     setTimeout(() => {
+        //         // console.log("I am a promise and I am fulfilled.");
+        //         resolve(true);
+        //     }, 2000)
+        // })
+        // let p2 = new Promise((resolve, reject) => {
+        //     console.log("Promise is pending.");
+        //     setTimeout(() => {
+        //         // console.log("I am a promise and I am rejected.");
+        //         reject(new Error("I am an error."))
+        //     }, 2000)
+        // })
+        // console.log(p1, p2);
+        // // To get the value.
+        // p1.then((value) => {
+        //     console.log(value);
+        // })
+        // // To catch the error.
+        // p2.catch((error) => {
+        //     console.log("Some error occured in p2.");
+        // })
+        // // To get the value and catch the error.
+        // p2.then((value) => {
+        //     console.log(value);
+        // }, (error) => {
+        //     console.log("Some error occured in p2.");
+        // })
+
+        // Promise Chaining
+        // let p1 = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         console.log("Resolved after 2 seconds");
+        //         resolve(56)
+        //     }, 2000)
+        // })
+        // p1.then((value) => {
+        //     console.log(value);
+        //     let p2 = new Promise((resolve, reject) => {
+        //         setTimeout(() => {
+        //             resolve("Promise 2")
+        //         }, 3000);
+        //     })
+        //     return p2
+        // }).then((value) => {
+        //     console.log(value);
+        //     console.log("We are done");
+        //     return 2
+        // }).then((value)=>{
+        //     console.log("Now we are pakka done.");
+        //     console.log(value);
+        // })
+
+        // Load Script function using promises.
+        // const loadScript = (src) => {
+        //     return new Promise((resolve, reject) => {
+        //         let script = document.createElement('script')
+        //         script.src = src;
+        //         document.body.appendChild(script)
+        //         script.onload = () => {
+        //         resolve("Script is loaded sir");
+        //         }
+        //         script.onerror = () =>{
+        //             reject(0)
+        //         }
+        //     });
+        // }
+        // let p1 = loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js")
+        // p1.then((value) =>{
+        //     console.log(value)
+        //     return loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js")
+        // }).then((value)=>{
+        //     console.log("Second script is ready");
+        // }).catch((error) =>{
+        //     console.log("We are sorry but we having problem loadinds this script");
+        // })
+
+        // Attaching Multiple Handlers to a promise
+        // let p1 = new Promise((resolve, reject) => {
+        //     console.log('I am resolved')
+        //     setTimeout(()=>{
+        //         resolve(1);
+        //     }, 2000)
+        // });
+        // p1.then(()=>{
+        //     console.log('Hurray')
+        //     return new Promise((resolve, reject) => {
+        //         setTimeout(()=>{
+        //             resolve(4)
+        //         }, 4000)
+        //     });
+        // }).then((value)=>{
+        //     console.log(value);
+        // })
+        // p1.then(() => {
+        //     console.log("Congratulation");
+        // }).then((value) => {
+        //     console.log(value);
+        // });
+        // console.log(p1);
+
+        // Promise API
+        // There are 6 static methods of Promise class.
+        // let p1 = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         resolve("value 1")
+        //         // reject(new Error("Error"))
+        //     }, 1000);
+        // });
+        // let p2 = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         // resolve("value 2")
+        //         reject(new Error("Error"))
+        //     }, 2000);
+        // });
+        // let p3 = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         resolve("value 3")
+        //     }, 3000);
+        // });
+        // 1. Promise.all 
+        // Note: This will not be executed even if a single promise shows an error.
+        // let promiseAll = Promise.all([p1, p2, p3])
+        // 2. Promise.allsettled 
+        // For checking status of every promise present in an array.
+        // let promiseAll = Promise.allSettled([p1, p2, p3])
+        // 3. Promise.race
+        // value which is resolved first is output, suppose if one of the promise shows error after rosolving error of another promise, error will not be shown.
+        // let promiseAll = Promise.race([p1, p2, p3])
+        // 4. Promise.any
+        // let promiseAll = Promise.any([p1, p2, p3])
+        // 5. Promise.resolve
+        // let promiseAll = Promise.resolve(8)
+        // 6. Promise.reject
+        // let promiseAll = Promise.reject("hey")
+        // promiseAll.then((value)=>{
+        //     console.log(value);
+        // })
+
+        // AsyncAwait (Error Handling)
+        // Note: different async functions execute parallely
+        // There is a special syntax to work with promises in javascipt
+        // async function nav() {
+        //     return 'noor'
+        // }
+        // nav().then((x)=>{
+        //     console.log(x)
+        // })
+        // async function weather() {
+        //     let delhiWeather = new Promise((resolve, reject) => {
+        //         setTimeout(() => {
+        //             resolve("27 deg")
+        //         }, 1000)
+        //     })
+        //     let bangaloreWeather = new Promise((resolve, reject) => {
+        //         setTimeout(() => {
+        //             resolve("21 deg")
+        //         }, 4000)
+        //     })
+        // delhiWeather.then(alert) // BAsic
+        // bangaloreWeather.then(alert) // Basic
+        //     console.log('Fetching Delhi weather please wait');
+        //     let delhiW = await delhiWeather
+        //     console.log('Fetched Delhi Weather.' + delhiW)
+        //     console.log('Fetching Bangalore weather please wait');
+        //     let bangaloreW = await bangaloreWeather
+        //     console.log('Fetched Bangalore Weather.' + bangaloreW);
+        //     return [delhiW, bangaloreW]
+        // }
+        // const cherry = async () => {
+        //     console.log('Hey  I am cherry and i am not waiting');
+        // }
+        // cherry().then(()=>{
+        //     console.log('Okie');
+        // })
+        // Case1 
+        // console.log("Welcome to weather control room");
+        // let a = weather();
+        // let b = cherry();
+        // a.then((value)=>{
+        //     console.log(value);
+        // })
+        // Case2: Case1 in async function
+        // const main1 = async () => {
+        //     console.log("Welcome to weather control room");
+        //     let a = await weather();
+        //     let b = await cherry();
+        // }
+        // console.log(main1());
+
+        // try, catch
+        // setTimeout(() => {
+        //     console.log("Hacking wifi... Please wait...");
+        //     console.log(rahul); // This will show an error.
+        // }, 1000);
+        // // console.log(rahul); // This will show an error and because of it below statements would not be executed.
+        // try {
+        //     console.log(rahul);
+        // } catch (error) {
+        //     console.log(error);
+        // }
+        // setTimeout(() => {
+        //     console.log("Fetching username and password.... Please wait...");
+        // }, 1000);
+        // setTimeout(() => {
+        //     console.log("Hacking Rahul's facebook id.... Please wait...");
+        // }, 1000);        
+    </script>
+</body>
+
+</html>

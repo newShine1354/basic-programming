@@ -1,0 +1,149 @@
+* {
+    margin: 0px;  
+    padding: 0px;
+    color: #20303C;
+    font-family: 'Wix Madefor Text', sans-serif;
+}
+
+#nav1 {
+    background-color: white;
+    padding: 15px 40px;
+    display: flex;
+    align-items: center;
+}
+
+.nav1-img1 {
+    width: 63px;
+    margin: 0px 460px 0px 0px;
+}
+
+.nav1-img23 {
+    height: 27px;
+    margin: 0px 30px;
+}
+
+#nav1-pipe{
+    border-left: 1px solid #43515C;
+    height:30px
+}
+
+#nav1-p{
+    margin: 0px 20px 0px 50px;
+}
+
+#nav1-a{
+    font-size: 14px;
+}
+
+#nav1-a:hover{
+    color: #116dff;
+}
+
+.nav1-btn{
+    text-decoration: none;
+    padding: 11px 28px;
+    margin: 0px 0px 0px 54px;
+    border-radius: 50px;
+    background-color: #116dff;
+    color: white;
+}
+
+.nav1-btn:hover{
+    background-color: #418AFF;
+}
+
+#nav2{
+    padding: 20px 400px 25px 400px;
+    background-color: #2F2E2E;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav2-a{
+    text-decoration: none;
+    color: white;
+    line-height: 24px;
+    font-size: 14px;
+    font-weight: lighter;
+}
+
+.main{
+    background-image: url('main-car.jpeg');
+    /* width: 100%; */
+    height: 130vh;
+    z-index: -1;
+    background-size: cover;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#sec1-img1{
+    margin: 80px 0px 20px 0px;
+    height: 190px;
+}
+
+#sec1-h1{
+    font-size: 80px;
+    line-height: 100px;
+    font-weight: bolder;
+    color: white;
+    font-family: sans-serif;
+}
+
+#sec1-p{
+    font-size: 20px;
+    font-weight: lighter;
+    color: black;
+}
+
+#sec2{
+    background: url('sec2-background.jpeg');
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+#sec2-h1{
+    color: white;
+    margin: 120px 0px 50px 0px;
+    font-size: 35px;
+    font-weight: lighter;
+}
+
+/* .sec2-h1-underline{
+   border-bottom: 3px solid white; 
+   width: 30px;
+} */
+
+.sec2-container{
+    display: flex;
+    margin: 0px 400px 0px 400px;
+}
+
+.sec2-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center
+    /* margin: 40px */
+}
+
+.sec2-img{
+    height: ;
+    width: ;
+}
+
+.sec2-container-h1{
+    color: white;
+}
+
+.sec2-p{
+    color: white;
+    text-justify: center;
+}

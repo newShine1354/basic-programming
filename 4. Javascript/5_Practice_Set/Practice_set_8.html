@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .bulb{
+        height: 500px;
+        width: 500px;
+        background-color: yellow;
+    }
+
+    .bulb-container{
+        height: 500px;
+        width: 500px;
+    }
+</style>
+
+<body>
+    <!-- Question 1 -->
+    <!-- Method 1 -->
+    <!-- <div class="container">
+        <button class="btn" onclick="alert('Hello')">Hello</button>
+        <button class="btn" onclick="alert('Hey')">Hey</button>
+    </div> -->
+    <!-- Method 2 and Method 3 -->
+    <!-- <div class="container">
+        <button class="btn">Hello</button>
+        <button class="btn">Hey</button>
+    </div> -->
+
+    <!-- Question 2 -->
+    <!-- Method 1 -->
+    <!-- <h1>Bookmarks</h1>
+    <a href="https://google.com"><button>Google</button></a>
+    <a href="https://fb.com"><button>Facebook</button></a>
+    <a href="https://twitter.com"><button>Twitter</button></a> -->
+    
+    <!-- Question 3 -->
+    <!-- <button class="btn">Google</button>
+    <button class="btn">Facebook</button>
+    <button class="btn">Twitter</button> -->
+
+    <!-- Question 3 -->
+    <div id="bulb" class="bulb bulb-container"></div>
+    <script>
+        // Question 1
+        // Write a program to show different alerts when different buttons are clicked
+        // Ans:
+        // Method 2
+        // let btn1 = document.getElementsByClassName('btn')[0]
+        // let btn2 = document.getElementsByClassName('btn')[1]
+        // btn1.onclick = () =>{
+        //     alert('Hello')
+        // }
+        // btn2.onclick = () =>{
+        //     alert('Hey')
+        // }
+        // Method 3
+        // const x = () =>{
+        //     alert("Hello")
+        // }
+        // const y = () =>{
+        //     alert("Hey")
+        // }
+        // let btn1 = document.getElementsByClassName('btn')[0]
+        // let btn2 = document.getElementsByClassName('btn')[1]
+        // btn1.addEventListener('click', x)
+        // btn2.addEventListener('click', y)
+
+        // Question 2
+        // Create a website which is capable of storing bookmarks of your favourite website using href.
+        // Ans:
+        
+        // Question 3
+        // Repeat Question 2 using event listeners.
+        // Hint: Use window.location and window.focus to navigate to the website.
+        // Ans:
+        // btn1 = document.getElementsByClassName('btn')[0];
+        // btn2 = document.getElementsByClassName('btn')[1];
+        // btn3 = document.getElementsByClassName('btn')[2];
+        // const google = () =>{
+        //     window.location = 'https://google.com'
+        // }
+        // const facebook = () =>{
+        //     window.location = 'https://fb.com'
+        // }
+        // const twitter = () =>{
+        //     window.location = 'https://twitter.com'
+        // }
+        // btn1.addEventListener('click', google)
+        // btn2.addEventListener('click', facebook)
+        // btn3.addEventListener('click', twitter)
+
+
+        // Question 4
+        // creaete a glowing bulb effect using classList and setInterval method in JavaScript.
+        // Ans:
+        setInterval(() => {
+            document.getElementById("bulb").classList.toggle("bulb")
+        }, 1000);
+    </script>
+</body>
+
+</html>

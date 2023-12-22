@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Object</title>
+</head>  
+
+<body>
+    <h1>Harry is not defined.</h1>
+    <script>
+        let age = Number.parseInt(prompt('Enter your age'))
+        try {
+            // throw new Error('Harry is not defined')
+            // console.log(hello);
+            // throw new ReferenceError('Harry is not defined')
+            if (age>120) {
+                throw new ReferenceError('This age is probably not valid. ')
+            }
+
+        } catch (error) {
+            console.log('how are you');
+            console.log(error.name);
+            console.log(error.message);
+            console.log(error.stack);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .navbar{
+            display: flex;
+        }
+        .navitems{
+            margin: 20px;
+        }
+        .btn:hover{
+            cursor: pointer;
+            transform: rotate(90deg);
+            transition: 2s;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <p class="navitems">Home</p>
+            <p class="navitems">About</p>
+            <p class="navitems">Services</p>
+            <p class="navitems">Contact</p>
+        </nav>
+    </header>
+    <button class="btn"><p class="Hamburger">Hamburger</p></button>
+    <script>
+        let button = document.querySelector(".btn")
+        let navbar = document.querySelector(".navbar")
+    </script>
+</body>
+</html>

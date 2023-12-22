@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Instagram</title>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+      font-size: 14px;
+      font-family: 'Segoe UI', -apple-system;
+    }
+
+    section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    article {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .box {
+
+      flex-direction: column;
+      border: 1px solid rgb(219, 219, 219);
+      margin: 10px 0px 0px 0px;
+      padding: 0px 40px;
+      box-sizing: border-box;
+    }
+
+    img {
+      height: 58px;
+      margin-top: 20px;
+      margin: 45px 0px 30px 0px;
+    }
+
+    .userinput, .passinput {
+      padding: 11px 120px 11px 7px;
+      border: 1px solid rgb(219, 219, 219);
+      border-radius: 3px;
+      margin: 0px 0px 5px 0px;
+      font-size: 12px;
+      outline: none;
+      background-color: #FAFAFA;
+    }
+    
+    .passinput{
+      padding: 7px 10px 11px 7px;
+    }
+
+    .password{
+      font-size: 12px;
+      margin: 0px 70px 0px 0px;
+      border: none;
+    }
+
+    .userinput:hover {
+      border: 1px solid rgb(168, 168, 168);
+    }
+
+    #btn1 {
+      padding: 7px 113px 5px 113px;
+      background-color: #4cb5f9;
+      color: white;
+      text-align: center;
+      font-weight: bold;
+      border: none;
+      border-radius: 7px;
+      margin: 9px 0px 0px 0px;
+    }
+
+    svg {
+      margin-bottom: -3px;
+    }
+
+    .facebook{
+      margin: 20px 0px 0px 0px;
+    }
+
+    #lface {
+      text-decoration: none;
+      color: #385185;
+      font-weight: bold;
+    }
+    
+    .a1span {
+      margin: 20px 0px 20px 0px;
+      font-size: 12px;
+      text-decoration: none;
+      color: #385185;
+    }
+
+    #article2 {
+      padding: 20px 71px 20px 71px;
+    }
+
+    #signin {
+      color: #4cb5f9;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    #article3{
+      margin: 20px 0px -30px 0px;
+    }
+
+    .Downloadbadge {
+      height: 40px;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+      flex-wrap: wrap;
+    }
+
+    .navlink {
+      margin-left: 15px;
+      text-decoration: none;
+      font-size: 12px;
+      color: rgb(100, 100, 100);
+    }
+
+    select,
+    .owner {
+      font-size: 12px;
+      color: rgb(100, 100, 100);
+      border: none;
+      margin-top: -30px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    .opt {
+      position: relative;
+      bottom: 32px;
+    }
+
+    img:hover{
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <article class="box" id="article1">
+      <div>
+        <img src="İnstagram1.png" alt="error" />
+      </div>
+      <div>
+        <input type="email" type="number" class="userinput" placeholder="Phone number, username or email" />
+      </div>
+      <div class="passinput">
+        <input type="password" name="password" class="password" placeholder="Password" />
+        <span id="show">Show</span>
+      </div>
+      <button id="btn1">Log in</button>
+      <p>OR</p>
+      <div class="facebook">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#385185" class="bi bi-facebook"
+          viewBox="0 0 16 16">
+          <path
+            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+        </svg>
+        <a href="https://www.facebook.com/login.php?skip_api_login=1&api_key=124024574287414&kid_directed_site=0&app_id=124024574287414&signed_next=1&next=https%3A%2F%2Fwww.facebook.com%2Fdialog%2Foauth%3Fclient_id%3D124024574287414%26locale%3Den_US%26redirect_uri%3Dhttps%253A%252F%252Fwww.instagram.com%252Faccounts%252Fsignup%252F%26response_type%3Dcode%252Cgranted_scopes%26scope%3Demail%26state%3D%257B%2522fbLoginKey%2522%253A%2522yhhxz613loid71onfd4g1womfaf16dvdy1127n8u01nwy3z87b8c0z%2522%252C%2522fbLoginReturnURL%2522%253A%2522%252Ffxcal%252Fdisclosure%252F%253Fnext%253Dhttps%25253A%25252F%25252Fwww.instagram.com%25252Faccounts%25252Fedit%25252F%25253F__coig_login%25253D1%2522%257D%26ret%3Dlogin%26fbapp_pres%3D0%26logger_id%3D497b8c4a-7050-4e2f-83d2-085830ad3250%26tp%3Dunspecified&cancel_url=https%3A%2F%2Fwww.instagram.com%2Faccounts%2Fsignup%2F%3Ferror%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied%26state%3D%257B%2522fbLoginKey%2522%253A%2522yhhxz613loid71onfd4g1womfaf16dvdy1127n8u01nwy3z87b8c0z%2522%252C%2522fbLoginReturnURL%2522%253A%2522%252Ffxcal%252Fdisclosure%252F%253Fnext%253Dhttps%25253A%25252F%25252Fwww.instagram.com%25252Faccounts%25252Fedit%25252F%25253F__coig_login%25253D1%2522%257D%23_%3D_&display=page&locale=en_GB&pl_dbl=0"
+          id="lface">Log in with Facebook</a>
+      </div>
+      <a href="#" class="a1span">Forgot password? </a>
+    </article>
+    <article class="box" id="article2">
+      <p>Don't have an account? <span><a href="#" id="signin">Sign up</a></span></p>
+    </article>
+    <article id="article3">
+      <span>Get the app.</span>
+    </article>
+    <article id="article4">
+      <img src="Google_Play_Store_badge_EN.svg.png" alt="error" class="Downloadbadge" />
+      <img src="Get_it_from_Microsoft_Badge.svg.png" alt="error" class="Downloadbadge" />
+    </article>
+  </section>
+  <footer>
+    <nav class="navbar" id="nav1">
+      <span><a href="http://google.com" class="navlink">Meta</a></span>
+      <span><a href="http://google.com" class="navlink">About</a></span>
+      <span><a href="http://google.com" class="navlink">Blog</a></span>
+      <span><a href="http://google.com" class="navlink">Jobs</a></span>
+      <span><a href="http://google.com" class="navlink">Help</a></span>
+      <span><a href="http://google.com" class="navlink">API</a></span>
+      <span><a href="http://google.com" class="navlink">Privacy</a></span>
+      <span><a href="http://google.com" class="navlink">Terms</a></span>
+      <span><a href="http://google.com" class="navlink">Locations</a></span>
+      <span><a href="http://google.com" class="navlink">Instagram Lite</a></span>
+      <span><a href="http://google.com" class="navlink">Threads</a></span>
+      <span><a href="http://google.com" class="navlink">Contact Uploading & Non-Users</a></span>
+      <span><a href="http://google.com" class="navlink">Meta Verified</a></span>
+    </nav>
+    <nav class="navbar" id="nav2">
+      <div class="opt">
+        <select>
+          <option value="English">English</option>
+          <option value="Punjabi">Punjabi</option>
+          <option value="Hindi">Hindi</option>
+        </select>
+      </div>
+      <span class="owner">© 2023 Instagram from Meta</span>
+    </nav>
+
+  </footer>
+</body>
+
+</html>

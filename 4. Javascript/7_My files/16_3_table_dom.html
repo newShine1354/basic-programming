@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <table class="table">
+    <caption>Table of legends</caption>
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Handle</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+  <script>
+    // Table links
+    let t = document.body.firstElementChild;
+    console.log(t.rows);
+    console.log(t.caption);
+    console.log(t.tHead.firstElementChild);
+    // console.log(t.tFoot);
+    // console.log(t.tBodies);
+    console.log(t.rows[0].cells);
+    console.log(t.rows[1].rowIndex);
+    console.log(t.rows[1].sectionRowIndex);
+    // console.log(t.rows[0].cells[3].cellIndex);
+    // console.log(this);
+    // console.log(window);
+    // console.log(Window);
+    // console.log(document);
+    // console.log(Document);
+  </script>
+</body>
+
+</html>

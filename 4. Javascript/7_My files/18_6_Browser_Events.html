@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Events</title>
+</head>
+
+<body>
+    <!-- Events can be handled through HTML events. -->
+    <!-- <div class="container" onmouseenter="alert('You are inside container')"> -->
+    <div class="container">
+        <!-- <button onclick="alert('hello')" class="btn">Click me</button> -->
+        <button class="btn">Click me</button>
+    </div>
+    <script>
+        // Browser Events: An event is a signal that somethinf has happened. All the DOM nodes generate such signals.
+        // Some important DOM events are:
+        // (A) Mouse Events 
+        // (B) Keyboard Events
+        // (C) Form Element Events
+        // (D) Document Events
+
+        // Instead of writing inside html tags:
+        // let a = document.getElementsByClassName("container")[0]
+        // a.onclick = () => {
+        //     let b = document.getElementsByClassName("container")[0]
+        //     b.innerHTML = "Hello World!"
+        // }
+        // Note: Adding a handler with javascript overwrite the existing handler.
+
+        // Handling Browser events(addEventListener and removeEventListerner)
+        // let x = (e) => {
+        //     alert('hello world!')
+        // }
+        // let y = (e) => { alert('hello') }
+        // btn = document.getElementsByClassName('btn')[0]
+        // btn.addEventListener('click', x) // This syntax will be only valid for btn1.
+        // btn.addEventListener('click', y)
+        // const x = addEventListener("mouseout", x) // This syntax will be valid for whole page.
+        // const x = addEventListener("mouseover", x)
+        // const x = addEventListener("keypress", x)
+        // const x = addEventListener("keyup", x)
+        // const x = addEventListener("keydown", x)
+        // const y = document.getElementById("btn1").x
+
+        // let a = prompt("What is your favourate number")
+        // if (a == '2') {
+        //     btn.removeEventListener('click', x)
+        // }
+
+        // Event Object
+    </script>
+</body>
+
+</html>

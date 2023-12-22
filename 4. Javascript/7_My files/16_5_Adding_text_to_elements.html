@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inner Properties</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <p style="color: aqua;">hello how are you.</p>
+            <div class="innerBox">
+                I am really fine.
+            </div>
+        </div>
+    </div>
+    <script>
+        let a = document.getElementsByClassName("box")[0]
+        // innerHTML (returns every thing)
+        console.log(a.innerHTML);
+        // a.innerHTML = " <b>I'm all right</b>"
+        // console.log(a.innerHTML);
+
+        // innerText (returns text only)
+        console.log(a.innerText);
+        // a.innerText = "okiee"
+
+        // innerContent (returns everything except tags)
+        // a.textContent = "okieee"
+        // console.log(a.textContent);
+
+    </script>
+</body>
+</html>

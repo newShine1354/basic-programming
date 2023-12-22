@@ -1,0 +1,136 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.body {
+    background-color: #0E0E0E;
+    padding: 100px 123px;
+}
+
+.container {
+    background-color: #FFFFFF;
+    padding: 85px 200px 50px 200px;
+}
+
+.flex-container {
+    background-color: #FFE3CB;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1.25fr;
+    grid-template-rows: 115px 95px 95px 55px;
+    gap: 20px 20px;
+    border-radius: 10px;
+    justify-content: center;
+    align-content: center;
+}
+
+.box {
+    background-color: #FE6363;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#box1 {
+    grid-row-start: 1;
+    grid-row-end: 5;
+    margin-right: 10px;
+    border-radius: 8px 0px 0px 8px;
+}
+
+#box2 {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    border-radius: 0px 8px 0px 0px;
+}
+
+#box3 {
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+#box4 {
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+#box5 {
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+#box7 {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    border-radius: 0px 0px 8px 0px;
+
+}
+
+.vertical-line-arrow {
+    height: 17px;
+    width: 3px;
+    background-color: #FE6363;
+}
+
+.horizontal-line-arrow {
+    width: 20px;
+    height: 3px;
+    background-color: #FE6363;
+}
+
+.arrow1 {
+    position: absolute;
+    transform: rotate(45deg);
+
+}
+
+.line1 {
+    width: 760px;
+    position: absolute;
+    height: 4px;
+    background-color: #FE6363;
+    top: 8px;
+}
+
+.arrow2 {
+    position: absolute;
+    transform: rotate(225deg);
+    left: 738px;
+}
+
+#arrow-line1 {
+    position: absolute;
+    top: 133px;
+    left: 375px;
+}
+
+.arrow3 {
+    position: absolute;
+    transform: rotate(135deg);
+
+}
+
+.line2 {
+    height: 370px;
+    position: absolute;
+    width: 4px;
+    background-color: #FE6363;
+    top: 0px;
+    left: 8px;
+}
+
+.arrow4 {
+    position: absolute;
+    transform: rotate(315deg);
+    top: 349px;
+}
+
+#arrow-line2 {
+    position: absolute;
+    top: 212px;
+    left: 257px;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red{
+            background-color: red;
+        }
+
+        .yellow{
+            background-color: yellow;
+        }
+
+        .text-light{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="first" class="yellow">
+        <span>Hey, I am good</span>
+    </div>
+    <script>
+        first = document.getElementById("first");
+        // Changing className
+        first.className = "red text-light"
+
+        // classlist Methods
+        console.log(first.classList);
+        // first.classList.add("yellow");
+        // first.classList.remove("yellow");
+        // first.classList.toggle("red") // if class exists, this method will remove it otherwise adds it.
+        // document.write(first.classList.contains("red"))
+    </script>
+</body>
+</html>

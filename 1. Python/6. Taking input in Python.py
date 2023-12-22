@@ -1,0 +1,13 @@
+c = input("Enter your name: ")
+print(c)
+a = input("Enter first number: ")
+b = input("Enter second number: ")
+print("As the type of a and b is string. Therefore, a + b = ", a + b)
+print("a + b =", int(a) + int(b))
+print("a - b =", int(a) - int(b))
+print("a * b =", int(a) * int(b))
+print("a / b =", int(a) / int(b))
+print("a ** b =", int(a) ** int(b))
+print("a // b =", int(a) // int(b))
+print("a % b =", int(a) % int(b))
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Counter</title>
+</head>
+
+<body>
+    <div class="flex justify-center items-center h-screen bg-purple-400 flex-col">
+        <div class="h-[400px] w-[400px] bg-slate-200 rounded-md overflow-hidden relative" id="img_container">
+            <img src="Day 11 (Tiger1).jpeg" alt="error" class="h-[400px] absolute" id="img1">
+            <img src="Day 11 (Tiger2).jpeg" alt="error" class="h-[400px] absolute" id="img2">
+            <img src="Day 11 (Tiger3).jpeg" alt="error" class="h-[400px] absolute" id="img3">
+        </div>
+        <div class="flex space-x-3 mt-5">
+            <button class="rounded-md bg-pink-500 border-none px-3 py-2 text-white hover:bg-pink-600 active:bg-pink-700"
+                onclick="next()">Next</button>
+            <button class="rounded-md bg-pink-500 border-none px-3 py-2 text-white hover:bg-pink-600 active:bg-pink-700"
+                onclick="previous()">Previous</button>
+        </div>
+    </div>
+    <script>
+        counter = 0;
+        let img1 = document.getElementById("img1")
+        let img2 = document.getElementById("img2")
+        let img3 = document.getElementById("img3")
+        let img_container = document.getElementById("img_container")
+        document.getElementById("img1").style.transform = "translate(400px)"
+        
+        const next = () => {
+            img3.style.transform = "translate(400px)";
+        }
+        const previous = () =>{
+            img3.style.transform = 'translate(-400px)'
+        }
+    </script>
+</body>
+
+</html>

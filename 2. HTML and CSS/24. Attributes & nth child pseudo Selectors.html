@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: block;
+            margin: auto;
+            width: 400px;
+        }
+
+        input {
+            display: block;
+        }
+
+        a[target] {
+            font-size: 44px;
+            color: blueviolet;
+        }
+
+        a[target='_self'] {
+            font-size: 44px;
+            color: violet;
+        }
+
+        input[type='text'] {
+            padding: 23px;
+            border: 2px solid red;
+        }
+
+        input[type='email'] {
+            color: yellow;
+            border: 2px solid red;
+            background-color: black;
+        }
+
+        /* nth child pseudo selector */
+        /* (a) This will apply CSS on nth child */
+        li:nth-child(3) {
+            color: aqua;
+        }
+
+        /* (b) We can use a mononomial in terms of m instead of using number where n belongs to N*/
+        /* li:nth-child(2n+2){
+            color: red;
+        } */
+        /* (c) Odd child */
+          li:nth-child(odd){
+            color: blue;
+          }
+            /* (d) For opposite selection */
+            /* li:nth-last-child(odd){
+              color: rgb(38, 255, 0);
+          }  */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2><a href="http://google.com" target="_blank">Go to google</a></h2>
+        <h2><a href="http://facebook.com" target="_self">Go to facebook</a></h2>
+        <form action="" class="form-control">
+            <input type="text" placeholder="Enter your name" id="name">
+            <input type="password" placeholder="Enter your password" id="password">
+            <input type="email" placeholder="Enter your email" id="password">
+            <input type="submit" value="submit">
+        </form>
+        <ul>
+            <li class="item" id="item-1">item-1</li>
+            <li class="item" id="item-2">item-2</li>
+            <li class="item" id="item-3">item-3</li>
+            <li class="item" id="item-4">item-4</li>
+            <li class="item" id="item-5">item-5</li>
+            <li class="item" id="item-6">item-6</li>
+            <li class="item" id="item-7">item-7</li>
+            <li class="item" id="item-8">item-8</li>
+            <li class="item" id="item-9">item-9</li>
+            <li class="item" id="item-10">item-10</li>
+            <li class="item" id="item-11">item-11</li>
+            <li class="item" id="item-12">item-12</li>
+        </ul>
+    </div>
+</body>
+
+</html>

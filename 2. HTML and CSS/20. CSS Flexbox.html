@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flex box</title>
+    <style>
+        .container {
+            border: 5px ridge red;
+            border-radius: 20px;
+            height: 600px;
+            /* 1_ Initialize the container as a flex box */
+            display: flex;
+            width: 80%;
+            /* 2_ Properties for Flex container */
+            /* (a) Default value of Flex-direction is row */
+            flex-direction: column;
+            /* flex-direction: column-reverse; */
+            /* flex-direction: row-reverse; */
+            /* flex-direction: column;  */
+            /* (b) Default value of Flex-wrap is nowrap */
+            flex-wrap: wrap;
+            /* flex-wrap: wrap-reverse; */
+            /* (c) To add both Flex direction and Wrap flex-flow attribute is used */
+            /* flex-flow: row wrap; */
+            /* (d) To align flex elements Horizontally */
+            justify-content: center;
+            /* Equal space between all flex elements */
+            /* justify-content: space-between; */
+            /* Equal space between all flex elements including Initial and Ending Space */
+            /* justify-content: space-evenly; */
+            /* Equal right-left-margin of all flex elements */
+            /* justify-content: space-around; */
+            /* Default Value of justify-content */
+            /* justify-content: left; */
+            /* (e) To align Flex items vertically */
+            /* align-items: flex-end; */
+            /* align-items: center; */
+            /* Same as Space-between but vertically */
+            /* align-items: stretch; */
+            /* Default value of text-align */
+            /* align-items: flex-start; */
+
+        }
+
+        .item {
+            border: 2px solid green;
+            width: 150px;
+            height: 150px;
+            box-sizing: border-box;
+            margin: 10px;
+            padding: 20px;
+            color: aqua;
+            border-radius: 30px;
+            background-color: #000000;
+        }
+
+        /* #item1 { */
+            /* Flex properties for Flex item */
+            /* (a) Higher the order later, it shows up in the container */
+            /* order: 2; */
+            /* (b) To increase width with increase in display size, rate of increase is proportional to value of flex-grow  */
+            /* flex-grow: 2; */
+            /* (b) To decrease width with decrease in display size, rate of decrease is proportional to value of flex-shrink  */
+            /* flex-shrink: 3;  */
+            /* margin: 100px; */
+        /* } */
+
+        /* #item2 { */
+            /* flex-grow: 3; */
+            /*flex-shrink: 3; */
+            /* When flex-direction is set to row flex-basis: will control width */
+            /* When flex-direction is set to column flex-basis: will control height */
+            /* flex-basis: 300px; */
+        /* } */
+
+        /* #item3 { */
+            /* flex: (flex-grow, flex-shrink, flex-basis) */
+            /* flex: 4 2 300px; */
+            /* align-self: flex-end; */
+            /* align-self: flex-start; */
+            /* align-self: center; */
+            /* align-self: stretch; */
+        /* } */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item" id="item1">Box 1</div>
+        <div class="item" id="item2">Box 2</div>
+        <div class="item" id="item3">Box 3</div>
+        <div class="item">Box 4</div>
+        <div class="item">Box 5</div>
+        <div class="item">Box 6</div>
+    </div>
+</body>
+
+</html>

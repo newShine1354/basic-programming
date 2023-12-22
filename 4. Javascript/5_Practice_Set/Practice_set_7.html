@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Answer1: -->
+    <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav> -->
+
+
+    <!-- Answer2: -->
+    <!-- <table class="table">
+        <caption>Table of legends</caption>
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td colspan="2">Larry the Bird</td>
+            <td>@twitter</td>
+          </tr>
+      </table> -->
+
+
+    <!-- Answer3: -->
+    <!-- <div class="container">
+        <div class="box" id="box1">Box1</div>
+        <div class="box" id="box2">Box2</div>
+        <div class="box" id="box3">Box3</div>
+    </div> -->
+
+
+    <!-- Answer4: -->
+    <ul class="list-group">
+        <li class="list-group-item">An item</li>
+        <li class="list-group-item">A second item</li>
+        <li class="list-group-item">A third item</li>
+        <li class="list-group-item">A fourth item</li>
+        <li class="list-group-item">And a fifth one</li>
+    </ul>
+    <script> 
+
+        // Question 1
+        // Create a navbar and change the color of its first element to red.
+        // Answer:
+        // Method 1
+        // let navelement = document.body.firstElementChild
+        // navelement.firstElementChild.firstElementChild.style.color = "red"
+        // Method 2
+        // document.getElementsByClassName("navbar-brand")[0].style.color = "red"
+        
+        // Question 2
+        // Create a table without tbody, then use the "View Page Source" (Ctrl+U shortcut on Chrome) button to check whether it has a tbody or not.
+        // Answer:
+        // Not in view page source but in inspect.
+        
+        // Question 3
+        // Create an element with three children and change the color of first and last children to green.
+        // Answer:
+        // let container = document.body.firstElementChild
+        // container.firstElementChild.style.color = "green"
+        // container.lastElementChild.style.color = "green"
+
+        // Question 4
+        // Write a JavaScript code to change the background of all li tags to cyan.
+        // Answer:
+        // let listItems = document.getElementsByTagName("li")
+        // let arr_listItems = Array.from(listItems)
+        // arr_listItems.forEach(element => {
+        //     element.style.background = "cyan";
+        // });
+
+        // Question 5
+        // Which of the followings is used to look for the farthest ancestor that matches a given CSS selector?
+        // a) matches b) closest c) contains d) none of these
+        //Answer: d) none of these
+    </script>
+</body>
+
+</html>

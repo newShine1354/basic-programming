@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    I am start of this container (outer).
+    <div class="container">
+        I am start of this container (inner).
+        <div id="first">I am the first element</div>
+        I am end of this container (inner).
+    </div>
+    I am end of this container (outer).
+    <script>
+        // Intertion methods
+        // (A) Classication method
+        let a = document.getElementsByTagName('div')[0];
+        // a.innerHTML =  '<h1>Hello World!</h1>' + a.innerHTML;
+        // a.innerHTML =  a.innerHTML + '<h1>Hello World!</h1>';
+
+        // (B) createElement Method
+        let new_div = document.createElement('div');
+        // document.body.append("<h1> I am fine</h1>");
+        // new_div.innerHTML = "<h1> I am fine</h1>";
+        // a.append(new_div) // end of node
+        // new_div.className = "new_div"
+        // a.prepend(new_div); // Beginning of the node.
+        // a.before(new_div); // Before the node.
+        // a.after(new_div); // After the node.
+        // a.replaceWith(new_div) //  Will replace a.
+
+        // (c) insertAdjacentHTML("position", html)
+        let first = document.getElementById("first");
+        // first.insertAdjacentHTML("beforebegin", '<div class = "text">beforebegin</div>') 
+        // first.insertAdjacentHTML("beforeend", '<div class = "text">beforeend</div>') // Beforeend works same as append.
+        // first.insertAdjacentHTML("afterbegin", '<div class = "text">afterbegin</div>')
+        // first.insertAdjacentHTML("afterend", '<div class = "text">afterend</div>')
+
+        // remove method
+        // first.remove();
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position absolute, relative, fixed and sticky in CSS</title>
+</head>
+<style>
+    .container1 {
+        border: 2px solid black;
+        background-color: aqua;
+        margin-top: 50px;
+    }
+
+    .container2 {
+        border: 2px solid black;
+        background-color: aqua;
+        margin-top: 50px;
+        height: 1500px;
+    }
+
+    /* CSS Position: static(Default), relative,absolute,  fixed ,sticky */
+    .box {
+        display: inline-block;
+        border: 2px solid red;
+        width: 150px;
+        height: 150px;
+        margin: 2px;
+    }
+
+    #box1 {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        /* Postion as per the dimensions of page */
+        /* don't occupy space separetly of its own, it overlapps on the other elements i.e there will be no intial space */
+    }
+
+    #box3 {
+        position: relative;
+        top: 20px;
+        right: 20px;
+        /* Position as per their initial position */
+        /* there will be empty space at initial postion, next element will start from the point after the intial position of Object */
+    }
+
+    #box6 {
+        position: fixed;
+        right: 10px;
+    }
+
+    #box7 {
+        position: fixed;
+        right: 10px;
+    }
+
+    #box8 {
+        position: sticky;
+        top: 100px;
+    }
+</style>
+
+<body>
+    <div class="container1">
+        <div class="box" id="box1">1</div>
+        <div class="box" id="box2">2</div>
+        <div class="box" id="box3">3</div>
+        <div class="box" id="box4">4</div>
+    </div>
+    <div class="container2">
+        <div class="box" id="box5">5</div>
+        <div class="box" id="box6">6</div>
+        <div class="box" id="box7">7</div>
+        <div class="box" id="box8">8</div>
+    </div>
+</body>
+
+</html>

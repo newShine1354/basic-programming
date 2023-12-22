@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attributes Methods</title>
+    <style>
+        /* #first{
+            background-color: rgb(240, 200, 147);
+        } */
+    </style>
+</head>
+<body>
+    <div id="first" class = "Nav">
+        Hey I an first container
+    </div>
+    <div>Hello World</div>
+    <script>
+        // getAttribute
+        // let a = first.getAttribute("class")
+        // let b = document.body.getElementsByClassName("Nav")[0].getAttribute("id")
+        // console.log(a);
+        // console.log(b);
+
+        // hasAttribute
+        // console.log(first.hasAttribute("class"));
+        // console.log(first.hasAttribute("style"));
+
+        // setAttribute
+        // first.setAttribute("hidden", "true")
+        document.getElementById('first').setAttribute("style", "color:red")
+
+        // removeAttribute
+        // document.getElementById("first").removeAttribute("class", "true ramneek")
+        
+        // Attributes
+        console.log(document.getElementById("first").attributes);
+
+    </script>
+</body>
+</html>

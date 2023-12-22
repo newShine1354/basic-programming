@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Converter</title>
+    <style>
+        .box{
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <label for="Enter weight in kilograms: ">Enter weight in kilograms: <input type="number" id="kg"></label>
+        <button class="btn" onclick="convertKgToG()">Convert</button>
+        <label for="Weight in gm: ">Weight in gm: <input type="text" id="g"></label><br>
+    </div>
+
+    <div class="box">
+        <label for="Enter Length in kilometer: ">Enter length in kilometer: <input type="number" id="km"></label>
+        <button class="btn" onclick="convertKmToM()">Convert</button>
+        <label for="Length in m: ">Length in m: <input type="text" id="m"></label><br>
+    </div>
+
+    <div class="box">
+        <label for="Enter weight in grams: ">Enter weight in gm: <input type="number" id="gram"></label>
+        <button class="btn" onclick="convertGToKg()">Convert</button>
+        <label for="Weight in gm: ">Weight in kg: <input type="text" id="kilogram"></label><br>
+    </div>
+
+    <script>
+        let kg = document.getElementById('kg')
+        let g = document.getElementById('g')
+        let km = document.getElementById('km')
+        let m = document.getElementById('m')
+        let kilogram = document.getElementById('kilogram')
+        let gram = document.getElementById('gram')
+        const convertKgToG = () => {
+            let gram = Number.parseInt(kg.value) * 1000
+            g.value = gram.toString() + 'g'
+        }
+        const convertKmToM = () => {
+            let meter = Number.parseInt(km.value) * 1000
+            m.value = meter.toString() + 'g'
+        }
+        const convertGToKg = () => {
+            let Kilogram = Number.parseInt(gram.value) / 1000
+            kilogram.value = Kilogram.toString() + 'g'
+        }
+
+    </script>
+</body>
+
+</html>
