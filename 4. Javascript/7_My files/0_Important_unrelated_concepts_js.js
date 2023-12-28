@@ -77,7 +77,7 @@ const user2 = {
 // To use function written in user1 for user2. 
 // user1.about("flute", "cricket")
 // user1.about.call() // We have to pass value to call method other wise it will show as undefined.
-user1.about.call(user2, "Guitar", "football")
+// user1.about.call(user2, "Guitar", "football")
 // Note: Also we can define about function outside an object and use call() method.
 // Apply
 // Same as call() the only one difference is we can pass all the arguments as an array.
@@ -99,3 +99,8 @@ user1.about.call(user2, "Guitar", "football")
 // user1.about();
 // user1.about.call(user1);
 
+// Function Expression 
+// console.log(sum(3,6));
+// const sum = (a, b) =>{
+//         return a + b;
+// }
