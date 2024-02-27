@@ -1,48 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Transition Effects</title>
     <style>
-        html{
-            font-size: 10px;
-        }
-        #box{
-            display: flex;
-            height: 200px;
-            width: 200px;
-            background-color: black;
-            color: red;
-            justify-content: center;
-            align-items: center;
-            /* transition-property: background-color; */
-            /* transition-property: Border-radius, background-color; */
-            /* transition-duration: 3s; */
-            /* transition-timing-function: ease-in; */
-            /* transition-delay: 2s; */
+      html {
+        font-size: 10px;
+      }
+      #box {
+        display: flex;
+        height: 200px;
+        width: 200px;
+        background-color: black;
+        color: red;
+        justify-content: center;
+        align-items: center;
+        /* transition-property: background-color; */
+        /* transition-property: Border-radius, background-color; */
+        /* transition-duration: 3s; */
+        /* transition-timing-function: ease-in; */
+        /* transition-delay: 2s; */
 
-            /* Transition short hand property in one line */
-            /* transition: property transition-duration transition-timing-function transition-delay ; */
-            transition: all 3s ease-in 1s;
-        }
-        #box:hover{
-            background-color: blue; 
-            border-radius: 30px;
-            height: 400px;
-            Width: 400px;
-            font-size: 32px;
-        }
+        /* Transition short hand property in one line */
+        /* transition: property transition-duration transition-timing-function transition-delay ; */
+        transition: all 3s ease-in 1s;
+      }
+      #box:hover {
+        background-color: blue;
+        border-radius: 30px;
+        height: 400px;
+        width: 400px;
+        font-size: 32px;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <h3>This is CSS Trasition Tutorial</h3>
     <div class="container">
-        <div id="box">This is my Box</div>
+      <div id="box">This is my Box</div>
     </div>
-</body>
-
+  </body>
 </html>

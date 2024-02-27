@@ -1,12 +1,12 @@
 // Object literals are reference type which stores key value pairs and do not has index as arrays.
 const person = {
-    name: "Navnoor Singh",
-    // Noor's friend: "Ramneek Singh", // This will show an error.
-    "Noor's friend": "Ramneek Singh",
-    age: 18,
-    hobbies: ["Football", "learning programming", "watching comedy movies"]
-}
-// console.log(typeof person, person); 
+  name: "Navnoor Singh",
+  // Noor's friend: "Ramneek Singh", // This will show an error.
+  "Noor's friend": "Ramneek Singh",
+  age: 18,
+  hobbies: ["Football", "learning programming", "watching comedy movies"],
+};
+// console.log(typeof person, person);
 // console.log(person.name);
 // console.log(person["name"]);
 // console.log(person.hobbies);
@@ -43,7 +43,7 @@ const person = {
 // }
 
 // Computed properties
-const key1 = "Objkey1";
+// const key1 = "Objkey1";
 // const key2 = "Objkey2";
 // const value1 = "myvalue1";
 // const value2 = "myvalue2";
@@ -78,12 +78,12 @@ const key1 = "Objkey1";
 
 // A Object literal can not have 2 exactly same keys.
 // const obj1 = {
-//     key1: value1, 
+//     key1: value1,
 //     key2: value2,
 //     key1: value3 // Later key will be printed
 // }
 // const obj2 = {
-//     key3: value3, 
+//     key3: value3,
 //     key4: value3,
 //     key1: value5 // Later key will be printed
 // }
@@ -103,14 +103,14 @@ const { name: firstname, ...rest } = person;
 
 // Objects inside array
 const users = [
-    { userId: 1, firstname: "Nav", gender: "male" },
-    { userId: 2, firstname: "Noor", gender: "male" },
-    { userId: 3, firstname: "neek", gender: "male" }
-]
+  { userId: 1, firstname: "Nav", gender: "male" },
+  { userId: 2, firstname: "Noor", gender: "male" },
+  { userId: 3, firstname: "neek", gender: "male" },
+];
 // console.log(users)
 // console.log(users[0]);
-console.log(users[0]["userId"]);
-console.log(users[0].userId);
+// console.log(users[0]["userId"]);
+// console.log(users[0].userId);
 // for (user of users){
 //     console.log(user);
 // }
@@ -134,7 +134,7 @@ console.log(users[0].userId);
 //     key1: "value1",
 //     key2: "value2"
 // }
-// const obj2 = { 
+// const obj2 = {
 //     key3: "value3"
 // }
 // const obj2 = {}
@@ -142,26 +142,28 @@ console.log(users[0].userId);
 // console.log(obj2.key1); // Undefined
 // const obj2 = Object.create(obj1); // {} Empty object.
 // The above syntax will make obj1 proto of obj2
-// console.log(obj2.key2); 
+// console.log(obj2.key2);
 // console.log(obj2);
 // console.log(obj2.__proto__); // Check in console for more information.
 // console.log(obj1.__proto__);
 // obj2 donot contains key2, so intepreature will find in the object inside create method
 
 const object = [
-    {
-        name: "Navnoor Singh",
-        hobbies: {
-            h1: "football",
-            h2: "programming"
-        }
+  {
+    name: "Navnoor Singh",
+    hobbies: {
+      h1: "football",
+      h2: "programming",
     },
-    {
-        name: "Ramneek Singh",
-        hobbies: {
-            h1: "cricket",
-            h2: "being standard"
-        }
-    }
-]
+  },
+  {
+    name: "Ramneek Singh",
+    hobbies: {
+      h1: "cricket",
+      h2: "being standard",
+    },
+  },
+];
 
+const [, { name, hobbies }] = object;
+console.log(name, hobbies);

@@ -1,17 +1,18 @@
-const prompt=require("prompt-sync")()
-let a = Array.from(prompt("Enter any string"))
+// const prompt=require("prompt-sync")()
+// let a = Array.from(prompt("Enter any string"))
 
-console.log(a);
+// console.log(a);
 let name = "Noor"; // 'Noor'
 // console.log(name);
 // console.log(name.length);
 // console.log(name[0])
-// console.log(name[1])
+// console.log(name[1]) 
 // console.log(name[4])
 
 // Converting String to Number (vica-versa)
 // let age = "4";
 // age = Number(age);
+// age = parseInt(age)
 // Another method
 // age = +age // age = +"4";
 // console.log(typeof (age));

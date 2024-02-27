@@ -1,5 +1,5 @@
 // Array is a reference data_type.(They are stored in heap and their index is stored in stack)
-// This inclues arrays, array methods and properties, Loops in arrays, Cloning array, Array Distructuring.
+// This inclues arrays, array methods and properties, Loops in arrays, Cloning array, Array Destructuring.
 // Iterables : are those datatypes on which we can use for of loop.
 // Examples of iterables are strings, arrays and sets.
 // Array like objects: string is an array like object as it has same properties as that of arrays.
@@ -148,12 +148,12 @@ let array2 = [...array1, 3,4,5] // Method 4 by using spread operator is new effi
 // fruits.push("Banana"); // Sucessfully we have change a const array.
 // console.log(fruits);
 
-// Array Distructuring.
+// Array Destructuring.
 const myarray = ["value1", "value2", "value3", "value4", "value5"];
 // let myvar1 = myarray[0];
 // let myvar2 = myarray[1];
-// let [myvar1, myvar2] = myarray; // Array Distructuring. myvar1 = myarray[0] and myvar2 = myarray[1]
-// let [myvar1, ,myvar2] = myarray; // Array Distructuring. myvar1 = myarray[0] and myvar2 = myarray[2]
+// let [myvar1, myvar2] = myarray; // Array Destructuring. myvar1 = myarray[0] and myvar2 = myarray[1]
+// let [myvar1, ,myvar2] = myarray; // Array Destructuring. myvar1 = myarray[0] and myvar2 = myarray[2]
 // console.log(myvar1);
 // console.log(myvar2);
 let [myvar1, myvar2, ...mynew_array] = myarray;

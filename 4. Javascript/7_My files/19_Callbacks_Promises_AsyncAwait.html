@@ -164,22 +164,23 @@
         // })
 
         // Attaching Multiple Handlers to a promise
-        // let p1 = new Promise((resolve, reject) => {
-        //     console.log('I am resolved')
-        //     setTimeout(()=>{
-        //         resolve(1);
-        //     }, 2000)
-        // });
-        // p1.then(()=>{
-        //     console.log('Hurray')
-        //     return new Promise((resolve, reject) => {
-        //         setTimeout(()=>{
-        //             resolve(4)
-        //         }, 4000)
-        //     });
-        // }).then((value)=>{
-        //     console.log(value);
-        // })
+        let p1 = new Promise((resolve, reject) => {
+            console.log('I am resolved')
+            setTimeout(()=>{
+                resolve(1);
+            }, 2000)
+        });
+        console.log(p1);
+        p1.then(()=>{
+            console.log('Hurray')
+            return new Promise((resolve, reject) => {
+                setTimeout(()=>{
+                    resolve(4)
+                }, 4000)
+            });
+        }).then((value)=>{
+            console.log(value);
+        })
         // p1.then(() => {
         //     console.log("Congratulation");
         // }).then((value) => {

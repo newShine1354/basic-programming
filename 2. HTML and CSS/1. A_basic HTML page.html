@@ -1,26 +1,91 @@
+<!DOCTYPE html>
+<!-- declaration defines that this document is an HTML5 document -->
 <html>
-    <head>
-        <meta char="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="discription" content="this is description">
-        <meta name="keywords" content="yoga, yoga tutorials, asana">
-        <meta name="rebots" content="index, follow">
-        <title>A basic HTML page</title>
-        
-</head>
-<body>
-<h1>YOGA</h1>
-The heading tag defines the Heading in HTML. There are 6 levels of Heading in HTML. The level of h1 is highest and level of h6 is lowest
-<p>Yoga (/'jo?g?/ (listen);[1] Sanskrit: ???, lit.?'yoke' or 'union' pronounced [jo?g?]) is a group of physical, mental, and spiritual practices or disciplines which originated in ancient India and aim to control (yoke) and still the mind, recognizing a detached witness-consciousness untouched by the mind (Chitta) and mundane suffering (Du?kha). There is a wide variety of schools of yoga, practices, and goals[2] in Hinduism, Buddhism, and Jainism,[3][4][5] and traditional and modern yoga is practiced worldwide.</p>
-<h3>There are 8 elements of yoga:-
-<pre>1.Yama (abstinences)
-2.Niyama (observances)
-3.Asana (yoga postures)
-4.Pranayama (breath control)
-5.Pratyahara (withdrawal of the senses)
-6.Dharana (concentration)
-7.Dhyana (meditation)
-8.Samadhi (absorption)
-</pre>
-</body>
-</html> 
+  <head>
+    <meta char="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="discription" content="this is description" />
+    <meta name="keywords" content="yoga, yoga tutorials, asana" />
+    <meta name="rebots" content="index, follow" />
+    <title>A basic HTML page</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+
+      #container,
+      h1,
+      .para {
+        border: 1px solid black;
+      }
+
+      #container {
+        display: flex;
+      }
+
+      #box1 {
+        width: 50%;
+      }
+
+      #box2 {
+        width: 50%;
+      }
+
+      h1 {
+        text-align: center;
+        font-weight: 100;
+        font-size: 20px;
+        padding: 5px;
+      }
+
+      .para {
+        height: 175px;
+      }
+      /* {
+        height: 200px;
+      }  */
+
+      p {
+        padding: 2px;
+      }
+
+      .noBorder {
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="box1">
+        <h1 class="">HTML</h1>
+        <div class="para">
+          <p class="">1. Not available</p>
+          <p class="">2. Not available</p>
+          <p class="">3. Not available</p>
+          <p class="">4. Not available</p>
+          <p class="">5. Not available</p>
+        </div>
+      </div>
+      <div id="box2">
+        <h1 class="">HTML5</h1>
+        <div class="para">
+          <p class="">1. Write javascript inside script tag.</p>
+          <p class="">2. Multimedia, audio, video tags.</p>
+          <p class="">3. Geolocation.</p>
+          <p class="">4. svg and mathemal.</p>
+          <p class="">5. Latest version of html.</p>
+          <p class="">6. Doctype declaration simple and in one line.</p>
+          <p class="">7. Local storage instead of cookies.</p>
+          <p class="">8. Geolocation</p>
+        </div>
+      </div>
+    </div>
+    <div class="">
+      <h1 class="noBorder">What is index.js?</h1>
+      <p class="">
+        It is special name which is presendtd when website root address is typed
+      </p>
+    </div>
+  </body>
+</html>

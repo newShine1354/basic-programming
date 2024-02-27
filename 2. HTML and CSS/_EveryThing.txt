@@ -1,0 +1,40 @@
+1. Difference between html and html5.
+2. Formatting in html.
+3. Anchor tag.
+4. Image, Audio, Video.
+5. Lists:- 1. Ordered list(ol)
+           2. Unordered list(ul(types: disc, circle, square))
+           3. Discription list(dl, dt, dd)
+6. Table:- Tags: table, thead, tbody, tfoot, <colgroup><col span='3'></colgroup>, tr, th(colspan = "number", rowspan = "number"), td(colspan, rowspan)
+7. Form:- Tags: <select> <option>1</option> <option>2</option> </select>, label(for = {id}), input(type = radio, checkbox, date, time, text, submit, reset, etc), textarea(rows= {number without units}, cols)
+8. Ids and Classes:- Id is prefered because it is more specific.
+9. Html entities:- Starts with ampersand(&) and ends with semi-colan(;).
+10. Semantic tags:- Are block-level tags, they define what type of content is present inside them.
+    Tags: <Header></Header> <Main> <Section> <Article></Article> </Section> </Main> <Footer></Footer>.
+11. Image map:- Tags: img(src, alt, usemap="#mapname"), <map> area(shape(rect, circle, poly) coords="x1, y1, x2, y2", href) </map>.
+12. iframe:- Tag: <iframe src="" title=""></iframe>, replacement of <frameset></frameset>.
+13. SEO : Search Engine Optimization : 1. On page SEO
+                                       2. Off page SEO 
+14. Unknown Tags: 1. <abbr title = "Hypertext Markup Language"> HTML </abbr>
+                  2. <bdo dir="rtl"> This text will go right-to-left. </bdo>
+                  3. <p> Press <kbd> Ctrl </kbd> + <kbd> C </kbd> to copy text (Windows).</p> (keyboard input).
+                  4. <p> Message from my computer: </p> <p><samp> File not found. <br> Press F1 to continue </samp></p> (sample output from a computer program)
+                  5. <details><summary> Epcot Center </summary><p> Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events. </p></details>
+15. Selectors: 1. CSS tag selector: h1, p{}
+               2. id selector: #id{}
+               3. class selector: .class{}
+               4. targer p inside div: div p{}
+               5. p which is right inside div: div > p{}
+               6. if p is right after div: div + p{}
+               7. attribute selector: input[type= "date"]
+               8. nth-child pseudo selector: li:nth-child(3){}
+               9. nth-last-child pseudo selector: li:nth-last-child(3){}
+               10. pseudo Selectors (a) unvisited link:- a:link {}
+                                    (b) visited link:- a:visited {}
+                                    (c) mouse over link:- a:hover {}
+                                    (d) selected link:- a:active {}
+16. Font and related properties
+17. Display: block, inline, inline-block, flex, grid, none.
+18. Border and Background
+19. Box Model: The CSS box model is essentially a box that wraps around every HTML element. It consists of: content, padding, borders and margins. 
+20. 
