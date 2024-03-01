@@ -78,19 +78,19 @@
 // a();
 
 // *** Q3. Based on call bind and apply ***
-// const piyush = {
-//   name: "Piyush Garg",
-//   sayName: function () {
-//     console.log(this.name);
-//   },
-// };
-// const jhon = {
-//   name: "Jhon Doe",
-//   sayName: function () {
-//     console.log(this.name);
-//   },
-// };
-// jhon.sayName.call(piyush);
+const piyush = {
+  name: "Piyush Garg",
+  sayName: function () {
+    console.log(this.name);
+  },
+};
+const jhon = {
+  name: "Jhon Doe",
+  sayName: function () {
+    console.log(this.name);
+  },
+};
+jhon.sayName.bind(piyush);
 // jhon.sayName();
 
 // function sayMyName() {
@@ -109,20 +109,49 @@
 //     },
 //   };
 
-  const hl1 = {
-    name: "fhj",
-    theeka: function () {
-      console.log("hlo");
-    },
-  };
-  console.log(hl1.theeka.__proto__);
-  console.log(hl1.__proto__);
-  console.log(Object.getPrototypeOf(hl1));
-  let arr = [1,2,2,4]
-  console.log(Object.getPrototypeOf(arr));
+// const hl1 = {
+//   name: "fhj",
+//   theeka: function () {
+//     console.log("hlo");
+//   },
+// };
+// console.log(hl1.theeka.__proto__);
+// console.log(hl1.__proto__);
+// console.log(Object.getPrototypeOf(hl1));
+// let arr = [1,2,2,4]
+// console.log(Object.getPrototypeOf(arr));
 //   console.log(Object.getPrototypeOf(hl0));
 //   console.log(hl0.__proto__);
 //   hl0.__proto__ = hl1;
 //   console.log(Object.getPrototypeOf(hl0));
 //   console.log(hl0.__proto__);
 
+// *** Q5. this in arrow function ***
+// const obj1 = {
+//   nameg: "Navnoor Singh",
+//   myName: () => {
+//     console.log(`My name is ${this}`);
+//   },
+// };
+// obj1.myName();
+// const obj2 = {
+//   nameg: "Navnoor Singh",
+//   myName: function () {
+//     console.log(`My name is ${this.nameg}`);
+//   },
+// };
+// obj2.myName();
+
+const obj1 = {
+  username: "navnoor singh",
+  userdetails: {
+    username: "ramneek singh",
+    obj2: {
+      username: "jaspreet singh",
+      func: () => {
+        console.log(this.username);
+      },
+    },
+  },
+};
+obj1.userdetails.obj2.func();

@@ -12,15 +12,15 @@
         // matches, closest, contains
         let id1 = document.getElementById("id1")
         let box1 = document.getElementsByClassName("box")[0]
-        // console.log(id1);
+        console.log(id1);
         // To check if element matches the given CSS selector
-        // console.log(id1.matches(".class")); // False, because the id doesn't match.
+        console.log(id1.matches("#id1")); // False, because the id doesn't match.
         // console.log(id1.matches(".box")); // True
         // console.log(box1.matches("#id1")); // True
         // To look for the nearest ancestor(parent) that matches the given css selector . The element itself is also checked.
-        // console.log(sp1.closest(".box")); // Returns nearest parent element having class box.
+        console.log(sp1.closest(".box")); // Returns nearest parent element having class box.
         // console.log(sp1.closest("#sp1")); // Returns itself
-        // To look for the nearest child that matches the given css selector . The element itself is also checked.
+        // To look for the nearest child that matches the given css selector .The element itself is also checked.
         // console.log(id1.contains(sp1)); // Returns itself
         // console.log(sp1.contains(sp1)); // Returns itself
     </script>

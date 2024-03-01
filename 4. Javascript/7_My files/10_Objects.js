@@ -5,6 +5,7 @@ const person = {
   "Noor's friend": "Ramneek Singh",
   age: 18,
   hobbies: ["Football", "learning programming", "watching comedy movies"],
+  1: "power",
 };
 // console.log(typeof person, person);
 // console.log(person.name);
@@ -24,6 +25,9 @@ const person = {
 // Creating an array of Keys
 // let arrayofKeys = Object.keys(person);
 // console.log(arrayofKeys);
+// Creating an array of values
+// let arrayOfValues = Object.values(person);
+// console.log(arrayOfValues);
 
 // Iterating object literals
 // Note: Objects are not iterables, firstly we have to make array of keys of object literal using Object.keys() method
@@ -60,7 +64,7 @@ const person = {
 
 // Cloning Object literals.
 // Spread Operator in Object literals:
-// const array1 = [..."ahhdsfh"];
+const array1 = [..."ahhdsfh"];
 // console.log(array1);
 // const array2 = [...1234567];
 // console.log(array2);
@@ -68,10 +72,13 @@ const person = {
 // const alphabat_name = [...name]
 // console.log(alphabat_name);
 // const obj1 = {..."123"}
-// const obj2 = {..."Navnoor singh"}
+const obj2 = { ..."Navnoor singh" };
 // console.log(obj1)
-// console.log(obj2)
-// console.log({...person});
+// console.log(obj2);
+// console.log({ ...person, howg: "Ding Ding" });
+// for (const key in person) {
+//   console.log(typeof key);
+// }
 // Using Object.assign() method
 // const new_person = Object.assign({},person)
 // console.log(new_person);
@@ -130,10 +137,11 @@ const users = [
 // console.log(user1first_name, user3first_name, gender);
 
 // Acessing key of another object (create method)
-// const obj1 = {
-//     key1: "value1",
-//     key2: "value2"
-// }
+
+const obj1 = {
+  key1: "value1",
+  key2: "value2",
+};
 // const obj2 = {
 //     key3: "value3"
 // }
@@ -145,7 +153,7 @@ const users = [
 // console.log(obj2.key2);
 // console.log(obj2);
 // console.log(obj2.__proto__); // Check in console for more information.
-// console.log(obj1.__proto__);
+console.log(obj1.__proto__);
 // obj2 donot contains key2, so intepreature will find in the object inside create method
 
 const object = [
@@ -165,5 +173,25 @@ const object = [
   },
 ];
 
-const [, { name, hobbies }] = object;
-console.log(name, hobbies);
+const [
+  {
+    hobbies: { h1, h2 },
+  },
+  {},
+] = object;
+console.log("h1", h1);
+console.log("h2", h2);
+console.log(object.__proto__);
+object.__proto__ = { age: 4 };
+console.log(object.__proto__);
+console.log(object.age);
+
+// const [, { name, hobbies }] = object;
+// console.log(name, hobbies);
+
+const objectUsingCreare = Object.create({
+  name: "Navnoor Singh",
+  age: 19,
+});
+
+console.log(objectUsingCreare.__proto__);

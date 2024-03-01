@@ -1,14 +1,15 @@
 // Array is a reference data_type.(They are stored in heap and their index is stored in stack)
+// The heap is a region of memory where data is stored and managed during the execution of a program.
 // This inclues arrays, array methods and properties, Loops in arrays, Cloning array, Array Destructuring.
 // Iterables : are those datatypes on which we can use for of loop.
 // Examples of iterables are strings, arrays and sets.
 // Array like objects: string is an array like object as it has same properties as that of arrays.
 
-const a1 = [1, "Hello", false, "Hello"]
-// console.log(a1.slice(0, 2)); 
+const a1 = [1, "Hello", false, "Hello"];
+// console.log(a1.slice(0, 2));
 // console.log(a1)
 
-let marks_class_12 = [65, 34, 87, 84]
+let marks_class_12 = [65, 34, 87, 84];
 // console.log(marks_class_12)
 // console.log(marks_class_12[0])
 // console.log(marks_class_12[1])
@@ -27,11 +28,14 @@ let num = [1, 2, 3, 34, 4, 5, 6, 8];
 
 // toString Method
 // let b = num.toString();
+// let c = String(num)
 // console.log(b);
+// console.log(c);
 // console.log(num);
 
 // join Method
-// let c = num.join(" and ")
+// let c = num.join("")
+// let c = num.join()
 // console.log(c, typeof c)
 
 // includes Method
@@ -59,15 +63,20 @@ let num = [1, 2, 3, 34, 4, 5, 6, 8];
 // console.log(num);
 
 // concat Method
-let num_more = [10, 11, 12, 13, 14, 15, 16]
-let num_even_more = [67, 45, 98, 23]
+let num_more = [10, 11, 12, 13, 14, 15, 16];
+let num_even_more = [67, 45, 98, 23];
 // let newArray = num.concat(num_more, num_even_more)
+// let newArray = num + num_more + num_even_more;
 // console.log(newArray);
+// console.log(typeof newArray);
 // console.log(num); // Not affected
 // console.log(num_more); // Not affected
 
 // sort Method
 num = [101, 32, 193, 34, 483, 59, 546, 38, 30, 3];
+// console.log(num, num.length);
+// num[0] = 69;
+// console.log(num, num.length);
 // // Sorting is done alphabatically means index of 2000 will be smaller than 30 or 3
 // num.sort(); // It modifies original array
 // console.log(num)
@@ -84,8 +93,12 @@ num = [101, 32, 193, 34, 483, 59, 546, 38, 30, 3];
 
 // splice Method(used to add new items and delete to an array)
 // Syntax: array.splice(position to add, No. of elements to removeEventListener, elements to be added)
-// let new_num = num.splice(2, 3, 1921, 2332, 7633)
-// console.log(new_num)
+// console.log(num);
+let new_num = num.splice(2,4,36)
+// let new_numslice = num.slice(2, 4)
+console.log(num);
+console.log(new_num)
+// console.log(new_numslice);
 // console.log(num)
 
 // slice Method(slice out a piece from an array)
@@ -95,7 +108,7 @@ num = [101, 32, 193, 34, 483, 59, 546, 38, 30, 3];
 
 // Loops in Arrays
 // For loop
-num = [3, 54, 1, 2, 4]
+num = [3, 54, 1, 2, 4];
 // for (let i = 0; i < marks_class_12.length; i++) {
 //     const element = marks_class_12[i];
 //     console.log(element)
@@ -133,13 +146,13 @@ let array1 = [1, 2, 3, 4, true];
 // let array2 = array1 // This will not clone an array because they are refrenced data types. This means if we change array1 then array2 will also be affected.
 // let array2 = [1, 2, 3, 4, true]; // Method 1 is not efficient.
 // let array2 = array1.slice(0) // Method 2 most used method because of its speed.
-// let array2 = [].concat(array1) // Method 3 
+// let array2 = [].concat(array1) // Method 3
 // let array2 = [...array1] // Method 4 by using spread operator is new efficient method.
 // console.log(array2)
 
-// Cloning array and adding more items 
+// Cloning array and adding more items
 // let array2= array1.slice(0).concat("5")
-let array2 = [...array1, 3,4,5] // Method 4 by using spread operator is new efficient method.
+let array2 = [...array1, 3, 4, 5]; // Method 4 by using spread operator is new efficient method.
 // console.log(array2)
 
 // Using const for making arrays
@@ -161,3 +174,4 @@ let [myvar1, myvar2, ...mynew_array] = myarray;
 
 // HigherOrder functions on arrays:
 // forEach, map, filter, reduce
+// Symbol.iterator.

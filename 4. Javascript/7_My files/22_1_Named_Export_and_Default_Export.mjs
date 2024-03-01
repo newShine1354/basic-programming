@@ -4,7 +4,7 @@ const c = "Sukhdeep";
 const d = "Japleen";
 
 export default d;
-export {d};
-export {c};
-export {b};
-export {a};
+export { d };
+export { c };
+export { b };
+export { a };

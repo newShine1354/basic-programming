@@ -1,62 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document Object Model</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document Object Model</title>
   </head>
 
-<body>
-  <nav>
-    <ul>
-      <li>Home</li>
-      <li>About</li>
-      <li>Hire Me</li>
-    </ul>
-  </nav>
-  <div class="container">
-    <p>Hey, i am a good boy.</p>
-  </div>
-  
-  <script>
-    // DOM represents the page content as HTML.
-    // document.body // Page body as js object.
-    // document.body.style.background = "green" // Changes page background to green
+  <body>
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Hire Me</li>
+      </ul>
+    </nav>
+    <div class="container">
+      <p class="class_Name">Hey, i am a good boy.</p>
+      <p class="class_Name">Hey, i am a good boy.</p>
+      <p class="class_Name">Hey, i am a good boy.</p>
+      <p class="class_Name">Hey, i am a good boy.</p>
+    </div>
 
-    // Chapter_ 7 : Walking DOM
-    // document.getElementsByClassName("class_Name"); // Returns html collection(object) having elements of class = "class_Name"
-    // document.getElementById("Id_name")
+    <script>
+      // DOM represents the page content as HTML.
+      // document.body // Page body as js object.
+      // document.body.style.background = "green" // Changes page background to green
 
-    // Childrens of an element(Dom transversal methods)
-    // console.log(document.body.firstChild);
-    // console.log(document.body.childNodes[0]);
-    // console.log(document.body.lastChild);
-    // console.log(document.body.childNodes); // returns nodelist
-    // console.log(document.body.childNodes[document.body.childNodes.length - 1]);
-    // console.log(document.body.hasChildNodes);
-    // let arr = Array.from(document.body.childNodes)
-    // console.log(arr);
+      // Chapter_ 7 : Walking DOM
+      // document.getElementsByClassName("class_Name"); // Returns html collection(object) having elements of class = "class_Name"
+      // document.getElementById("Id_name")
+      // console.log(document.body.getElementsByClassName("class_Name"));
 
-    // Parent & Sibling(Dom transversal methods)
-    // $0 is the reference of tag selected in inspect->elements and $1 is reference of previous selected.
-    // console.log(document.body.firstChild);
-    a = document.body.firstElementChild
-    // console.log(a.parentNode); // returns document if a have no parent.
-    // console.log(a.parentElement); // returns document if a have no parent.
-    // console.log(a.firstElementChild.firstElementChild.nextElementSibling);
-    console.log(a.firstChild.nextSibling);
+      // Childrens of an element(Dom transversal methods)
+      // console.log(document.body.firstChild);
+      // console.log(document.body.childNodes[0]);
+      // console.log(document.body.lastChild);
+      // console.log(document.body.childNodes); // returns nodelist
+      // console.log(document.body.childNodes[document.body.childNodes.length - 1]);
+      // console.log(document.body.hasChildNodes);
+      let arr = Array.from(document.body.childNodes);
+      // console.log(arr);
 
-    // Element only Navigation(Dom transversal methods)
-    let b = document.body
-    // console.log("First child of b is: ", b.firstChild); // This will return text node.
-    // console.log("First Element child of b is: ", b.firstElementChild);
-    // console.log(b.previousElementSibling);
-    console.log(b.nextElementSibling);
-    // console.log(b.firstElementChild);
-    // console.log(b.lastElementChild);
+      // Parent & Sibling(Dom transversal methods)
+      // $0 is the reference of tag selected in inspect->elements and $1 is reference of previous selected.
+      // console.log(document.body.firstChild);
+      a = document.body.firstElementChild;
+      // console.log(a.parentNode); // returns document if a have no parent.
+      // console.log(a.parentElement); // returns document if a have no parent.
+      // console.log(a.firstElementChild.firstElementChild.nextElementSibling);
+      console.log(a.firstChild.nextSibling);
 
-  </script>
-</body>
-
+      // Element only Navigation(Dom transversal methods)
+      let b = document.body;
+      // console.log("First child of b is: ", b.firstChild); // This will return text node.
+      // console.log("First Element child of b is: ", b.firstElementChild);
+      // console.log(b.previousElementSibling);
+      // console.log(b.nextElementSibling);
+      // console.log(b.firstElementChild);
+      // console.log(b.lastElementChild);
+    </script>
+  </body>
 </html>

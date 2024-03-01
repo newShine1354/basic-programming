@@ -6,3 +6,4 @@
 
 const arr = [1, 3, 4];
 console.log(Object.getPrototypeOf(arr));
+console.log(Object.__proto__);

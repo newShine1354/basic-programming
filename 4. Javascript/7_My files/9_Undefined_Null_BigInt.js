@@ -19,10 +19,10 @@
 // console.log(typeof null);
 
 // BigInt
-// console.log(Number.MAX_SAFE_INTEGER)
+console.log(Number.MAX_SAFE_INTEGER)
 // let myNumber = 345;
 // let myBigint = BigInt(543); // Used to store interger greater than max safe integer.
 // console.log(myBigint);
-// myBigint = 4556n
-// console.log(myBigint);
+myBigint = 4556n
+console.log(myBigint);
 

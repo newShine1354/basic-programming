@@ -10,7 +10,7 @@
 // let sum = 0
 // for (let i = 1; i <= n; i ++){
 //     sum += i
-// } 
+// }
 // console.log("Sum of first" , n , "natural numbers is" , sum)
 
 // for in loop
@@ -45,3 +45,13 @@
 //     i++
 //     console.log(i)
 // }while (i <= 5)
+
+const obj1 = {
+  name: "navnoor Singh",
+  "Roll No.": 3,
+};
+
+console.log(Object.keys(obj1));
+for (let i = 0; i < Object.keys(obj1).length; ++i) {
+    console.log(`My ${Object.keys(obj1)[i]} is ${Object.values(obj1)[i]}`);
+}

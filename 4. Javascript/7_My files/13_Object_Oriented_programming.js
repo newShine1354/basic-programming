@@ -4,70 +4,91 @@
 
 // Acessing key of another object (create method)
 const obj1 = {
-    key1: "value1",
-    key2: "value2"
-}
-const obj2 = { 
-    key3: "value3"
-}
+  key1: "value1",
+  key2: "value2",
+};
+let obj2 = {
+  key3: "value3",
+};
 // const obj2 = {}
-obj2.key3 = "value3";
-console.log(obj2.key1); // Undefined
-const obj2 = Object.create(obj1); // {} Empty object.
+// obj2.key3 = "value3";
+// console.log(obj2.key1); // Undefined
+obj2 = Object.create(obj1); // {} Empty object.
 // The above syntax will make obj1 proto of obj2
-console.log(obj2.key2); 
-console.log(obj2);
-console.log(obj2.__proto__); // Check in console for more information.
-console.log(obj1.__proto__);
+// console.log(obj2.key2);
+// console.log(obj2);
+// console.log(obj2.__proto__); // Check in console for more information.
+// console.log(obj1.__proto__);
 // obj2 donot contains key2, so intepreature will find in the object inside create method
+// delete obj1.key1;
+// console.log(obj1);
+// console.log(obj2.__proto__);
 
-// const user = {
-//     firstname: "Navnoor Singh",
-//     lastname: "Thind",
-//     email: "nurisingh123@gmail.com",
-//     age: 34,
-//     address: "House Number, Colony, Pincode, State",
-//     about() {
-//         return `${this.firstname} is ${this.age} years`
-//     },
-//     is18: function () {
-//         return this.age >= 18;
-//     }
-// }
-// const aboutUser = user.about();
+const user = {
+  firstname: "Navnoor Singh",
+  lastname: "Thind",
+  email: "nurisingh123@gmail.com",
+  age: 34,
+  address: "House Number, Colony, Pincode, State",
+  about() {
+    return `${this.firstname} is ${this.age} years`;
+  },
+  is18: function () {
+    return this.age >= 18;
+  },
+};
+const aboutUser = user.about();
 // console.log(aboutUser);
-// Function 
+// Function
 // 1. That function create object.
 // 2. Add key value pair.
 // 3. Return Object.
-// const userMethods = {
-//     about: function () {
-//         return `${this.firstName} is ${this.age} years`
-//     },
-//     is18: function () {
-//         return this.age >= 18;
-//     }
-// }
-// function createUser(firstName, lastName, Email, age, address) {
-//     const user = Object.create(userMethods); // userMethods is now proto of user.
-//     user.firstName = firstName;
-//     user.lastName = lastName;
-//     user.Email = Email;
-//     user.age = age;
-//     user.address = address;
-//     return user;
-// }
-// const user1 = createUser("Navnoor Singh", "Thind", "nurisingh123@gmail.com", 34, "House Number, Colony, Pincode, State")
-// const user2 = createUser("Ramneek Singh", "Thind", "nurisingh123@gmail.com", 34, "House Number, Colony, Pincode, State")
-// const user3 = createUser("Jaspreet Singh", "Thind", "nurisingh123@gmail.com", 34, "House Number, Colony, Pincode, State")
+const userMethods = {
+  about: function () {
+    return `${this.firstName} is ${this.age} years`;
+  },
+  is18: function () {
+    return this.age >= 18;
+  },
+};
+function createUser(firstName, lastName, Email, age, address) {
+  const user = Object.create(userMethods); // userMethods is now proto of user.
+  user.firstName = firstName;
+  user.lastName = lastName;
+  user.Email = Email;
+  user.age = age;
+  user.address = address;
+  return user;
+}
+const user1 = createUser(
+  "Navnoor Singh",
+  "Thind",
+  "nurisingh123@gmail.com",
+  34,
+  "House Number, Colony, Pincode, State"
+);
+const user2 = createUser(
+  "Ramneek Singh",
+  "Thind",
+  "nurisingh123@gmail.com",
+  34,
+  "House Number, Colony, Pincode, State"
+);
+const user3 = createUser(
+  "Jaspreet Singh",
+  "Thind",
+  "nurisingh123@gmail.com",
+  34,
+  "House Number, Colony, Pincode, State"
+);
 // console.log(user1.about());
 // console.log(user2.about());
 
 // Prototype (Only provided by functions)
 // In javascript function ===> function + object
-// function hello() {
-//     console.log("Hello World");
-// }
+function hello() {
+  console.log("Hello World");
+}
 // Function Properties
 // 1. name property
 // console.log(hello.name);
@@ -75,6 +96,7 @@ console.log(obj1.__proto__);
 // 3. Now interesting thing is we can add your properties.
 // hello.myOwnProperty = "very unique value"
 // console.log(hello.myOwnProperty);
+// console.log(hello.__proto__);
 
 // Function provide empty object(free space)
 // This empty object is called prototype
@@ -82,11 +104,14 @@ console.log(obj1.__proto__);
 // You can add property in the prototype
 // hello.myOwnproperty2 = "House1";
 // hello.prototype.myOwnproperty2 = "House2"
+// hello.__proto__ = {kifa :"fgd"}
+// hello.__proto__ = {hor :"ferhnjmj"}
+// console.log(hello.__proto__);
 // console.log(hello.myOwnproperty2);
 // console.log(hello.prototype.myOwnproperty2);
-// hello.prototype.sing = function(){
-//     return "lalalala"
-// };
+hello.prototype.sing = function () {
+  return "lalalala";
+};
 // console.log(hello.prototype.sing());
 
 // Using prototype as a object to store functions
@@ -146,47 +171,46 @@ console.log(obj1.__proto__);
 
 // getters and setters
 class Person {
-    constructor(firstName, lastName, age) {
-        this.firstName = firstName
-        this.lastName = lastName
-        this.age = age
-    }
-    // Getter is a function which we use as a property.
-    get fullName() {
-        return `${this.firstName} ${this.lastName}`
-    }
+  constructor(firstName, lastName, age) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.age = age;
+  }
+  // Getter is a function which we use as a property.
+  get fullName() {
+    return `${this.firstName} ${this.lastName}`;
+  }
 
-    setName(firsName, lastName){
-        this.firstName = firsName;
-        this.lastName = lastName;
-    }
-    // Setter
-    set fullName(fullname){
-        const [firstName, lastName] = fullname.split(" ")   
-        this.firstName = firstName
-        this.lastName = lastName
-    }
-    // Static method (Donot applicable on objects, are accessed using classname)
-    static classInfo(){
-        console.log("This is person class.");
-    }
-    // Static property (Donot applicable on objects, are accessed using classname)
-    static desc = "Static Property."
+  setName(firsName, lastName) {
+    this.firstName = firsName;
+    this.lastName = lastName;
+  }
+  // Setter
+  set fullName(fullname) {
+    const [firstName, lastName] = fullname.split(" ");
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+  // Static method (Donot applicable on objects, are accessed using classname)
+  static classInfo() {
+    console.log("This is person class.");
+  }
+  // Static property (Donot applicable on objects, are accessed using classname)
+  static desc = "Static Property.";
 }
 
-const person1 = new Person("Navnoor Singh", "Thind", 18)
-console.log(person1);
-console.log(person1.firstName);
+const person1 = new Person("Navnoor Singh", "Thind", 18);
+// console.log(person1);
+// console.log(person1.firstName);
 // To use function as a property we use getter. Use get before function declaration.
 // console.log(person1.fullName()); // This will show error because fullName is a getter, we donot need to use parathesis.
-console.log(person1.fullName);
-person1.firstName = "Jaspreet Singh";
-person1.lastName = "Mao Sahib";
-console.log(person1.fullName);
-person1.setName("Ramneek Singh", "Moti", 18);
-console.log(person1.firstName);
-console.log(person1.fullName);
+// console.log(person1.fullName);
+// person1.firstName = "Jaspreet Singh";
+// person1.lastName = "Mao Sahib";
+// console.log(person1.fullName);
+// person1.setName("Ramneek Singh", "Moti", 18);
+// console.log(person1.firstName);
+// console.log(person1.fullName);
 person1.fullName = "Japleen Singh"
 console.log(person1.firstName);
-console.log(person1.lastName);
-
+// console.log(person1.lastName);

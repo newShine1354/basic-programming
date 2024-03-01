@@ -3,7 +3,7 @@
 // Higher order functions are thoughs functions which take three argruments(value, index, array)
 
 // For each fuction
-let num = [34, 56, 87, 43, 85, 29]
+let num = [34, 56, 87, 43, 85, 29];
 // function Myfunc(number, index) {
 //     console.log(`Number at index ${index} is ${number}`);
 // }
@@ -14,10 +14,17 @@ let num = [34, 56, 87, 43, 85, 29]
 // });
 // In the case of objects inside an array.
 const users = [
-    { userId: 1, firstname: "Nav", gender: "male" },
-    { userId: 2, firstname: "Noor", gender: "male" },
-    { userId: 3, firstname: "neek", gender: "male" }
-]
+  { userId: 1, firstname: "Nav", gender: "male" },
+  { userId: 2, firstname: "Noor", gender: "male" },
+  { userId: 3, firstname: "neek", gender: "male" },
+];
+
+// const arr = [1, 2, 4, 2];
+// arr.forEach((item) => {
+//   return item * 2;
+// });
+// console.log(arr);
+
 // users.forEach(user =>{
 //     console.log(user.firstname)
 // })
@@ -48,11 +55,13 @@ const users = [
 //     return accumulator - currentValue
 // }, 100) // 100 is initial value.
 // console.log(new_num)
-const reduce_func = (h1, h2) => {
-    return h1 + h2
-}
-let new_num = num.reduce(reduce_func)
-console.log(new_num)
+
+// const reduce_func = (h1, h2) => {
+//   return h1 + h2;
+// };
+// let new_num = num.reduce(reduce_func);
+
+// console.log(new_num);
 // const userCart = [
 //     { productId: 1, productName: "mobile", prize: 12000 },
 //     { productId: 2, productName: "laptop", prize: 52000 },
@@ -94,7 +103,9 @@ console.log(new_num)
 
 // Fill Method (Used to fill items in an array.)
 // const myArray = new Array(10).fill(0);
+// const mysecond_array = new Array(1, 2, 34, { 1: 2 });
 // console.log(myArray);
+// console.log(mysecond_array);
 // const myArray = [1, 2, 3, 4, 5, 5, 6, 6, 7]
 // myArray.fill(0, 2, 5)
 // console.log(myArray);
@@ -106,16 +117,15 @@ console.log(new_num)
 // console.log(deletedValues);
 
 // Match method (Used to search a string for a match against any regular expression.)
-// let user = prompt("Enter 0, 1, 2")
-// let radnum = Math.floor(Math.random()*3);
-// let alphabets = ['a', 'b', 'c']
-// let matchNumArray = [alphabets][radnum]
-// console.log(matchNumArray);
-// const match = (matchNumArray, user) => {
-//     if(matchNumArray = "a" && user == "b")
-//     {
-//         alert("condition is satisfied")
-//     }
-// }
-// match(matchNumArray, user)
-
+let user = 'b'
+let radnum = Math.floor(Math.random() * 3);
+console.log(radnum);
+let alphabets = ["a", "b", "c"];
+let matchNumArray = alphabets[radnum];
+console.log(matchNumArray);
+const match = (matchNumArray, user) => {
+  if ((matchNumArray == "a" && user == "b")) {
+    console.log("condition is satisfied");
+  }
+};
+match(matchNumArray, user);

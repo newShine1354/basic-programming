@@ -25,8 +25,8 @@
 // // console.log(Person.about);
 // Person.about();
 // Another Example
-function personInfo(){
-        console.log(`Name of the person is `); // this is person(name of object literal.)
+function personInfo() {
+  console.log(`Name of the person is `); // this is person(name of object literal.)
 }
 // const Person1 = {
 //             name : "Navmoor Singh",
@@ -47,7 +47,7 @@ function personInfo(){
 //             marks : {Physics: 70, Chemistry:60},
 //             about: personInfo
 //             }
-            
+
 // console.log(Person1.about);
 // Person1.about();
 // Person2.about();
@@ -61,33 +61,35 @@ function personInfo(){
 // Call, Apply and Bind
 // Even if function is defined under an object literal, then also we have to pass object as agrument in the case of apply and bind.
 // const sum = () => "hello world";
-// console.log(sum()); 
+// console.log(sum());
 // console.log(sum.call()); // Same as above statement when no argrument is passed.
 const user1 = {
-                name : "Ramneek Singh",
-                age : 7,
-                about: function(hobby, game){
-                    console.log(this.name, this.age, hobby, game); 
-                }
-        }
+  name: "Ramneek Singh",
+  age: 7,
+  gender: "male",
+  about: function (hobby, game) {
+    console.log(this.name, this.age, this.gender, hobby, game);
+  },
+};
+
 const user2 = {
-                name : "Navnoor Singh",
-                age : 10,
-        }
-// To use function written in user1 for user2. 
+  name: "Navnoor Singh",
+  age: 10,
+};
+// To use function written in user1 for user2.
 // user1.about("flute", "cricket")
 // user1.about.call() // We have to pass value to call method other wise it will show as undefined.
 // user1.about.call(user2, "Guitar", "football")
 // Note: Also we can define about function outside an object and use call() method.
 // Apply
 // Same as call() the only one difference is we can pass all the arguments as an array.
-// user1.about.apply(user1, ["flute", "cricket"])
+// user1.about.apply(user2, ["flute", "cricket"])
 // Bind (This method return the function)
-// const user1_func = user1.about.bind(user1, "tabla", "cricket")
+const user1_func = user1.about.bind(user1, "tabla", "cricket");
 // user1_func();
 // don't do this mistake
-// const fun = user1.about;
-// fun(); // Reason in the video : 09:06 hours
+const fun = user1_func;
+fun(); // Reason in the video : 09:06 hours
 // If there is a arrow function in the object litersals
 // user1 = {
 //         name : "Ramneek Singh",
@@ -99,7 +101,7 @@ const user2 = {
 // user1.about();
 // user1.about.call(user1);
 
-// Function Expression 
+// Function Expression
 // console.log(sum(3,6));
 // const sum = (a, b) =>{
 //         return a + b;

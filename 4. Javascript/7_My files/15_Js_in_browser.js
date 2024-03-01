@@ -15,7 +15,7 @@
 // error() ==> used for errors.
 // console.error("Hai this is a error.") // try this syntax in console.
 // assert() ==> used to assert a condition
-// console.assert(5>53); // error is shown if condition is false.
+// console.assert(5<53); // error is shown if condition is false.
 // clear() ==> clears the console.
 // console.clear();
 // log() ==> outputs a message to the console
@@ -25,7 +25,7 @@
 // warn() ==> used for warnings
 // console.warn("Hey donot drink soda")
 // info() ==> For adding important information.
-// cosole.info("This is very similar to log.")
+console.info("This is very similar to log.")
 // console.info - Prints the text to the console as an informational message
 // time() ==> it clecks the time of operation
 // console.time("a")

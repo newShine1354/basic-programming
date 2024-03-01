@@ -1,62 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>More on Selectors</title>
     <style>
-        h1 {
-            background-color: black;
-            color: white;
-            text-align: center;
-            font-weight: bold;
-        }
+      h1 {
+        background-color: black;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+      }
 
-        /* 1. To target p inside div (p will be effected even if it is indirect child of div) */
-        /* div p {
+      /* 1. To target p inside div (p will be effected even if it is indirect child of div) */
+      /* div p {
                     background-color: yellow;
                     padding: 10px;
                     font-weight: bold;
                 } */
-        /* 2. To target p inside li, applicable on li inside div */
-        /* div li p {
+      /* 2. To target p inside li, applicable on li inside div */
+      /* div li p {
             background-color: aqua;
             padding: 10px;
             font-weight: bold;
         } */
-        /* 3. To target p inside div, where p is direct child of div (p will not be effected if it is indirect child of div) */
-        /* div > p {
+      /* 3. To target p inside div, where p is direct child of div (p will not be effected if it is indirect child of div) */
+      /* div > p {
             background-color: yellowgreen;
             padding: 10px;
             font-weight: bold;
         } */
-        /* 4. To target p before which div tag is used i.e right after </div> */
-        div+p {
-            background-color: black;
-            color: white;
-            padding: 10px;
-            font-weight: bold;
-        }
+      /* 4. To target p before which div tag is used i.e right after </div> */
+      div + p {
+        background-color: black;
+        color: white;
+        padding: 10px;
+        font-weight: bold;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1>This is more on selectors</h1>
     <div class="container">
-        <div class="row">
-            <ul>
-                <li class="item">
-                    <p>Another Paragraph Inside li</p>
-                </li>
-                <li>This will not be affected by (div li p )</li>
-            </ul>
-            <p>First Paragraph</p>
-        </div>
-        <p>Second Paragraph</p>
+      <div class="row">
+        <ul>
+          <li class="item">
+            <p>Another Paragraph Inside li</p>
+          </li>
+          <li>This will not be affected by (div li p )</li>
+        </ul>
+        <p>First Paragraph</p>
+      </div>
+      <p>Second Paragraph</p>
     </div>
     <p>Outermost Paragraph</p>
-</body>
-
+  </body>
 </html>

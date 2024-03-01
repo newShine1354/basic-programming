@@ -136,7 +136,7 @@ const person = {
 // }
 // myfunc2(myfunc1);
 
-// 2. Function returning function.
+// 2. Function returning function(Closure).
 // function MyFunction() {
 //     function hello() {
 //         // console.log("hello world");
@@ -151,8 +151,7 @@ const person = {
 // ans(); // In the case of console.log
 
 // In javascript function ===> function + object
-// function hello() {
-//     console.log("Hello World");
-// }
+function hello() {console.log("Hello World");
+}
 // name property
-// console.log(hello.name);
+console.log(hello.name);
